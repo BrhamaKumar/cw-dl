@@ -41,7 +41,7 @@ bc_hdr = {"BCOV-POLICY": BCOV_POLICY}
 async def account_login(bot: Client, m: Message):
     global cancel
     cancel = False
-    token=[]
+    token=()
     url = "https://elearn.crwilladmin.com/api/v3/login-other"
     data = {
         "deviceType": "android",
