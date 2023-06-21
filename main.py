@@ -101,7 +101,7 @@ async def account_login(bot: Client, m: Message):
     editable1= await m.reply_text("**Now send the Batch ID to Download**")
     input2 = message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
-    html2 = s.get("https://elearn.crwilladmin.com/api/v3/comp/batch-topic/"+raw_text2+"?type=class&token="+token).json()
+    html2 = s.get("https://elearn.crwilladmin.com/api/v3/comp/batch-topic/"+raw_text2+"?type=class&token="+str(token)).json()
     topicid = html2["data"]["batch_topic"]
     bn = html2["data"]["batch_detail"]["name"]
     vj=""
