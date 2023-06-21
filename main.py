@@ -55,11 +55,14 @@ async def account_login(bot: Client, m: Message):
         "Usertype": "",
         "Appver": "1.55",
         "Apptype": "android",
-        "Content-Type": "application/json; charset=UTF-8",
-        "Content-Length": "313",
-        "Accept-Encoding": "gzip, deflate",
-        "user-agent": "okhttp/5.0.0-alpha.2",
-        'Connection': 'Keep-Alive'
+        "Connection": "keep-alive"
+        "Accept": "application/json"
+        "Content-Type": "application/x-www-form-urlencoded"
+        "origintype": "web",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+        "Origin": "https://web.careerwill.com",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate"
        }
     editable = await m.reply_text("Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password** \n or \nSend **TOKEN** like This this:-  **TOKEN**" )
     input1: Message = await bot.listen(editable.chat.id)
@@ -77,8 +80,6 @@ async def account_login(bot: Client, m: Message):
           await m.reply_text(token)
       else:
            await m.reply_text("go back to response")
-      #token = "4ffd1627981589c0a1261f7a114fbbf8bc87c6d9"
-      await m.reply_text(f"```{token}```")
     else:
       token = raw_text
     html1 = s.get("https://elearn.crwilladmin.com/api/v3/comp/my-batch?&token=" + token).json()
