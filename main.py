@@ -41,7 +41,8 @@ bc_hdr = {"BCOV-POLICY": BCOV_POLICY}
 async def account_login(bot: Client, m: Message):
     global cancel
     cancel = False
-    
+    token=[]
+    global token
     url = "https://elearn.crwilladmin.com/api/v3/login-other"
     data = {
         "deviceType": "android",
@@ -85,7 +86,6 @@ async def account_login(bot: Client, m: Message):
            await m.reply_text("go back to response")
     else:
       token = raw_text
-      global token 
     html1 = s.get("https://elearn.crwilladmin.com/api/v3/comp/my-batch?&token=" + token).json()
     topicid = html1["data"]["batchData"]
     cool=""
