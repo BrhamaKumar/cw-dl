@@ -55,9 +55,9 @@ async def account_login(bot: Client, m: Message):
         "Usertype": "",
         "Appver": "1.55",
         "Apptype": "android",
-        "Connection": "keep-alive"
-        "Accept": "application/json"
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Connection": "keep-alive",
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
         "origintype": "web",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
         "Origin": "https://web.careerwill.com",
